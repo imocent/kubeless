@@ -116,7 +116,7 @@ jobs:
   minikube:
     <<: *defaults
     machine:
-      image: ubuntu-1604:202007-01
+      image: circleci/ubuntu-server:latest
     steps:
       - checkout
       - run: sudo apt-get update -y
@@ -144,7 +144,7 @@ jobs:
   minikube_build_functions:
     <<: *defaults
     machine:
-      image: ubuntu-1604:202007-01
+      image: circleci/ubuntu-server:latest
     steps:
       - checkout
       - <<: *exports
