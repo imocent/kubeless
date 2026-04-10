@@ -86,7 +86,7 @@ ksonnet-lib:
 .PHONY: bootstrap
 bootstrap: bats ksonnet-lib
 
-	GO111MODULE="off" go get golang.org/x/lint/golint@v0.0.0-20210508222113-6edffad5e616
+	GO111MODULE="on" go get golang.org/x/lint/golint@v0.0.0-20210508222113-6edffad5e616
 	GO111MODULE="off" go get -u github.com/mitchellh/gox
 
 	@if ! which kubecfg >/dev/null; then \
