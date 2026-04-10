@@ -116,8 +116,7 @@ jobs:
   minikube:
     <<: *defaults
     machine:
-      image: circleci/ubuntu-server:latest
-    resource_class: large
+      image: ubuntu/go:1.22-24.04
     steps:
       - checkout
       - run: sudo apt-get update -y
@@ -145,8 +144,7 @@ jobs:
   minikube_build_functions:
     <<: *defaults
     machine:
-      image: circleci/ubuntu-server:latest
-    resource_class: large
+      image: ubuntu/go:1.22-24.04
     steps:
       - checkout
       - <<: *exports
