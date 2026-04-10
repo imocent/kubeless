@@ -13,7 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+sudo chown -R circleci:circleci /home/circleci/.minikube
 # Special case: if ./ksonnet-lib exists, set KUBECFG_JPATH
 test -d $PWD/ksonnet-lib && export KUBECFG_JPATH=$PWD/ksonnet-lib
 
