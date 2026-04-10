@@ -116,7 +116,7 @@ jobs:
   minikube:
     <<: *defaults
     machine:
-      image: ubuntu/go:1.22-24.04
+      image: default
     steps:
       - checkout
       - run: sudo apt-get update -y
@@ -144,7 +144,7 @@ jobs:
   minikube_build_functions:
     <<: *defaults
     machine:
-      image: ubuntu/go:1.22-24.04
+      image: default
     steps:
       - checkout
       - <<: *exports
