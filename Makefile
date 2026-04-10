@@ -86,8 +86,8 @@ ksonnet-lib:
 .PHONY: bootstrap
 bootstrap: bats ksonnet-lib
 
-	go get -u github.com/mitchellh/gox
-	go get -u golang.org/x/lint/golint
+	GO111MODULE="off" go get -u golang.org/x/lint/golint
+	GO111MODULE="off" go get -u github.com/mitchellh/gox
 
 	@if ! which kubecfg >/dev/null; then \
 	sudo wget -q -O /usr/local/bin/kubecfg https://github.com/ksonnet/kubecfg/releases/download/v0.9.0/kubecfg-$$(go env GOOS)-$$(go env GOARCH); \
