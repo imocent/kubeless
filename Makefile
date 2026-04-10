@@ -81,7 +81,7 @@ bats:
 	git clone --branch=v0.4.0 --depth=1 https://github.com/sstephenson/bats.git
 
 ksonnet-lib:
-	git clone --depth=1 https://github.com/ksonnet/ksonnet-lib.git
+	git clone --depth=1 --branch=v0.1.0 https://github.com/ksonnet/ksonnet-lib.git
 
 .PHONY: bootstrap
 bootstrap: bats ksonnet-lib
