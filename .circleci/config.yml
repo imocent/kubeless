@@ -120,7 +120,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update -y
-      - run: sudo apt-get install -y tar gzip bzip2 xz-utils
+      - run: sudo apt-get install -y ca-certificates tar gzip bzip2 xz-utils
       - attach_workspace:
           at: /tmp/go
       - <<: *exports
